@@ -23,17 +23,17 @@
 <button (click) = "buttonClick()">Click here </button> 
 
 <button (mouseover) = "buttonClick()">Click </button>
+
 <input type = "text" (keyup)="keyenter($event)"> 
 
 <input type = "text" (keyup.enter) = "keyupFiltering(user)" #user id = "UserInput">
 </div>
 <!-- Two way data binding  -->
 
-<input type="text" [value]="userName" #username (keyup.enter) = "updateUserName(username)">
-<p>{{userName}}</p>
+<!-- <input type="text" [value]="userName" #username (keyup.enter) = "updateUserName(username)"> -->
 
-<p>today code</p>
-<p>334lf34kf34</p>
+<input type="text" [(ngModel)] = "userName">
+<p>{{userName}}</p>
 
 
 <router-outlet />
